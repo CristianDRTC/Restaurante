@@ -1,0 +1,15 @@
+@model Socio
+@{ ViewData["Title"] = "Editar socio"; }
+
+<h1 class="h3">Editar socio</h1>
+
+<form asp-action="Edit" asp-route-id="@Model.IdSocio" method="post">
+    <input type="hidden" asp-for="IdSocio" />
+    <partial name="_Form" model="Model" />
+    <button class="btn btn-primary">Guardar cambios</button>
+    <a asp-action="Index" class="btn btn-link">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

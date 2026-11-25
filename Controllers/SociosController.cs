@@ -4,60 +4,61 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Gym.Controllers;
 
+[Route("Clientes/[action]")]
 public class SociosController : Controller
 {
-    private readonly ISocioService _socios;
+    private readonly IClienteService _clientes;
 
-    public SociosController(ISocioService socios) => _socios = socios;
+    public SociosController(IClienteService clientes) => _clientes = clientes;
 
     public async Task<IActionResult> Index(string? buscar)
     {
         ViewData["Buscar"] = buscar;
-        return View(await _socios.ListarAsync(buscar));
+        return View(await _clientes.ListarAsync(buscar));
     }
 
-    public IActionResult Create() => View();
+    public IActionResult Create() => View(new Cliente());
 
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(
-        [Bind("Documento,Nombres,Apellidos,Telefono,Correo,FechaNacimiento")] Socio socio)
+        [Bind("Documento,Nombres,Apellidos,Telefono,Correo")] Cliente cliente)
     {
-        if (await _socios.ExisteDocumentoAsync(socio.Documento))
-            ModelState.AddModelError(nameof(socio.Documento), "Ya existe un socio con ese documento.");
+        if (await _clientes.ExisteDocumentoAsync(cliente.Documento))
+            ModelState.AddModelError(nameof(cliente.Documento), "Ya existe un cliente con ese documento.");
 
-        if (!ModelState.IsValid) return View(socio);
+        if (!ModelState.IsValid) return View(cliente);
 
-        await _socios.CrearAsync(socio);
-        TempData["Ok"] = "Socio registrado.";
+        await _clientes.CrearAsync(cliente);
+        TempData["Ok"] = "Cliente registrado.";
         return RedirectToAction(nameof(Index));
     }
 
     public async Task<IActionResult> Edit(int id)
     {
-        var socio = await _socios.ObtenerAsync(id);
-        return socio is null ? NotFound() : View(socio);
+        var cliente = await _clientes.ObtenerAsync(id);
+        return cliente is null ? NotFound() : View(cliente);
     }
 
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id,
-        [Bind("IdSocio,Documento,Nombres,Apellidos,Telefono,Correo,FechaNacimiento")] Socio socio)
+        [Bind("IdCliente,Documento,Nombres,Apellidos,Telefono,Correo")] Cliente cliente)
     {
-        if (id != socio.IdSocio) return NotFound();
+        if (id != cliente.IdCliente) return NotFound();
 
-        if (await _socios.ExisteDocumentoAsync(socio.Documento, socio.IdSocio))
-            ModelState.AddModelError(nameof(socio.Documento), "Ya existe un socio con ese documento.");
+        if (await _clientes.ExisteDocumentoAsync(cliente.Documento, cliente.IdCliente))
+            ModelState.AddModelError(nameof(cliente.Documento), "Ya existe un cliente con ese documento.");
 
-        if (!ModelState.IsValid) return View(socio);
+        if (!ModelState.IsValid) return View(cliente);
 
-        await _socios.ActualizarAsync(socio);
-        TempData["Ok"] = "Socio actualizado.";
+        await _clientes.ActualizarAsync(cliente);
+        TempData["Ok"] = "Cliente actualizado.";
         return RedirectToAction(nameof(Index));
     }
 
     [HttpPost, ValidateAntiForgeryToken]
     public async Task<IActionResult> CambiarEstado(int id)
     {
-        await _socios.CambiarEstadoAsync(id);
+        await _clientes.CambiarEstadoAsync(id);
         return RedirectToAction(nameof(Index));
     }
 }

@@ -19,57 +19,57 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = Gym
 build_property.RootNamespace = Gym
-build_property.ProjectDir = /home/cristian/Documentos/ProyectoC#/Gym/
+build_property.ProjectDir = /home/cristian/Documentos/Gym/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/cristian/Documentos/ProyectoC#/Gym
+build_property.MSBuildProjectDirectory = /home/cristian/Documentos/Gym
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Home/Index.cshtml]
+[/home/cristian/Documentos/Gym/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Home/Privacy.cshtml]
+[/home/cristian/Documentos/Gym/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Shared/Error.cshtml]
+[/home/cristian/Documentos/Gym/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/cristian/Documentos/Gym/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Socios/Create.cshtml]
+[/home/cristian/Documentos/Gym/Views/Socios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaW9zL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Socios/Edit.cshtml]
+[/home/cristian/Documentos/Gym/Views/Socios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaW9zL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Socios/Index.cshtml]
+[/home/cristian/Documentos/Gym/Views/Socios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaW9zL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Socios/_Form.cshtml]
+[/home/cristian/Documentos/Gym/Views/Socios/_Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaW9zL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/_ViewImports.cshtml]
+[/home/cristian/Documentos/Gym/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/_ViewStart.cshtml]
+[/home/cristian/Documentos/Gym/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/cristian/Documentos/ProyectoC\#/Gym/Views/Shared/_Layout.cshtml]
+[/home/cristian/Documentos/Gym/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-f7ulsanucm

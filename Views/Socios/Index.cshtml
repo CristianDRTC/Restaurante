@@ -1,9 +1,9 @@
-@model List<Socio>
-@{ ViewData["Title"] = "Socios"; }
+@model List<Cliente>
+@{ ViewData["Title"] = "Clientes"; }
 
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3">Socios</h1>
-    <a asp-action="Create" class="btn btn-primary">Nuevo socio</a>
+    <h1 class="h3">Clientes</h1>
+    <a asp-action="Create" class="btn btn-primary">Nuevo cliente</a>
 </div>
 
 @if (TempData["Ok"] is string ok)
@@ -28,23 +28,23 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var s in Model)
+        @foreach (var cliente in Model)
         {
             <tr>
-                <td>@s.Documento</td>
-                <td>@s.Nombres @s.Apellidos</td>
-                <td>@s.Telefono</td>
-                <td>@s.Correo</td>
+                <td>@cliente.Documento</td>
+                <td>@cliente.Nombres @cliente.Apellidos</td>
+                <td>@cliente.Telefono</td>
+                <td>@cliente.Correo</td>
                 <td>
-                    <span class="badge @(s.Activo ? "bg-success" : "bg-secondary")">
-                        @(s.Activo ? "Activo" : "Inactivo")
+                    <span class="badge @(cliente.Activo ? "bg-success" : "bg-secondary")">
+                        @(cliente.Activo ? "Activo" : "Inactivo")
                     </span>
                 </td>
                 <td class="text-end">
-                    <a asp-action="Edit" asp-route-id="@s.IdSocio" class="btn btn-sm btn-outline-primary">Editar</a>
-                    <form asp-action="CambiarEstado" asp-route-id="@s.IdSocio" method="post" class="d-inline">
-                        <button class="btn btn-sm @(s.Activo ? "btn-outline-danger" : "btn-outline-success")">
-                            @(s.Activo ? "Desactivar" : "Activar")
+                    <a asp-action="Edit" asp-route-id="@cliente.IdCliente" class="btn btn-sm btn-outline-primary">Editar</a>
+                    <form asp-action="CambiarEstado" asp-route-id="@cliente.IdCliente" method="post" class="d-inline">
+                        <button class="btn btn-sm @(cliente.Activo ? "btn-outline-danger" : "btn-outline-success")">
+                            @(cliente.Activo ? "Desactivar" : "Activar")
                         </button>
                     </form>
                 </td>

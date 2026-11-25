@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Gym.Models;
 
 [Table("Usuario")]
-[Index("NombreUsuario", Name = "UQ__Usuario__6B0F5AE08BFAA463", IsUnique = true)]
+[Index("NombreUsuario", Name = "UX_Usuario_NombreUsuario", IsUnique = true)]
 public partial class Usuario
 {
     [Key]
@@ -24,6 +24,5 @@ public partial class Usuario
 
     public bool Activo { get; set; }
 
-    [InverseProperty("IdUsuarioNavigation")]
-    public virtual ICollection<Pago> Pagos { get; set; } = new List<Pago>();
+    public virtual ICollection<Pedido> Pedidos { get; set; } = new List<Pedido>();
 }
